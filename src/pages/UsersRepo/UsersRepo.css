@@ -1,0 +1,100 @@
+.wrapper-users {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.left {
+	background: #1f1f1f;
+	width: 30vw;
+	position: fixed;
+	left: 0%;
+	padding: 0 20px;
+	box-shadow: 2px 2px 20px rgba(22, 22, 22, 0.178);
+}
+
+.left .info {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.left .btn-back {
+	position: absolute;
+	top: 4%;
+	left: 10%;
+}
+
+.btn-back button {
+	background: rgb(219, 219, 219);
+	color: black;
+	padding: 10px 20px;
+	border: 1px solid black;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: 0.5s;
+	font-size: 1.1em;
+}
+
+.btn-back button:hover {
+	background: black;
+	color: white;
+}
+
+.info :nth-child(n) {
+	margin-bottom: 0.5rem;
+}
+
+.info .social-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.info .social-info :nth-child(n) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.info .photo img {
+	max-width: 150px;
+	border-radius: 100%;
+	border: 6px solid white;
+}
+
+.info .location :first-child {
+	font-size: 1.4em;
+}
+
+.info .username :last-child {
+	color: #c1c1c1;
+}
+
+.info .location {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.location :nth-child(n) {
+	margin: 0 0.5rem;
+}
+
+.right {
+	padding-top: 4rem;
+	position: relative;
+	left: 10%;
+	text-align: center;
+}
+
+.right h2 {
+	padding-bottom: 4rem;
+}
