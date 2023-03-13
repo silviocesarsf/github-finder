@@ -3,12 +3,12 @@ import reactLogo from "../../assets/react.svg";
 import "./SearchUser.css";
 import { AiFillGithub, AiOutlineSearch } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function SearchUser() {
 	const [userData, setUserData] = useState([]);
 	const [nameUser, setNameUser] = useState("");
-	// const [err, setErr] = useState(false);
-
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -17,8 +17,9 @@ function SearchUser() {
 
 	const handleSearchRequest = () => {
 		if (nameUser === "") {
-			return alert("Digite o nome de algum usuário");
+			return toast("Digite algum usuário");
 		}
+
 		fetch(`https://api.github.com/users/${nameUser}`)
 			.then((r) => r.json())
 			.then((response) => {
@@ -47,6 +48,18 @@ function SearchUser() {
 
 	return (
 		<div className="wrapper">
+			<ToastContainer
+				position="top-right"
+				autoClose={1000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="dark"
+			/>
 			<div className="logo">
 				<AiFillGithub />
 			</div>
